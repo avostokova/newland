@@ -12,7 +12,7 @@ function paht() {
         layer.bindPopup(feature.properties.name);
     }
     });
-    omnivore.kml('/kml/pahtusov_1.kml', null, customLayer).addTo(map);
+    omnivore.kml('./kml/pahtusov_1.kml', null, customLayer).addTo(map);
 
     let customLayer2 = L.geoJson(null, {
       style: function(feature) {
@@ -25,7 +25,7 @@ function paht() {
         layer.bindPopup(feature.properties.name);
     }
     });
-    omnivore.kml('/kml/pahtusov_2.kml', null, customLayer2).addTo(map);
+    omnivore.kml('./kml/pahtusov_2.kml', null, customLayer2).addTo(map);
 
     let img_url = './img/krotov.jpg';
     
