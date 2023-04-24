@@ -66,7 +66,7 @@ function litke() {
       layer.bindPopup(feature.properties.name);
     }
     });
-    omnivore.kml('/kml/lit1.kml', null, customLayer).addTo(map); 
+    omnivore.kml('./kml/lit1.kml', null, customLayer).addTo(map); 
 
     let customLayer2 = L.geoJson(null, {
       style: function(feature) {
@@ -79,7 +79,7 @@ function litke() {
         layer.bindPopup(feature.properties.name);
       }
       });
-      omnivore.kml('/kml/lit2.kml', null, customLayer2).addTo(map); 
+      omnivore.kml('./kml/lit2.kml', null, customLayer2).addTo(map); 
 
       let customLayer3 = L.geoJson(null, {
         style: function(feature) {
@@ -92,7 +92,7 @@ function litke() {
           layer.bindPopup(feature.properties.name);
         }
         });
-        omnivore.kml('/kml/lit3.kml', null, customLayer3).addTo(map); 
+        omnivore.kml('./kml/lit3.kml', null, customLayer3).addTo(map); 
 
         let customLayer4 = L.geoJson(null, {
           style: function(feature) {
@@ -105,7 +105,7 @@ function litke() {
             layer.bindPopup(feature.properties.name);
           }
           });
-          omnivore.kml('/kml/lit4.kml', null, customLayer4).addTo(map); 
+          omnivore.kml('./kml/lit4.kml', null, customLayer4).addTo(map); 
 
           let flag1 = L.marker([64.6528737984116, 40.58908849343494], {icon: flagIcon}).bindPopup('В 1821-1824 гг. лейтенант Ф.П.Литке возглавил четыре экспедиции на военном бриге “Новая Земля”. <br> Экспедиции под руководством Литке сделали опись западного берега Новой Земли от пролива Карские ворота до мыса Нассау. <br> Пробиться дальше на Север не дали сплоченные льды. Исследовав Маточкин Шар, Литке подтвердил высокую точность съемки Розмысловым пролива. <br> Впервые был проведен целый комплекс научных наблюдений: метеорологических, геомагнитных и астрономических. В 1823 г. Ф.П.Литке нанес на карту в районе пролива Костин Шар “Белужью губу”. <br> Он использовал название, которое было дано губе в старину промышленниками-поморами за то, что здесь часто велся промысел белух. Но главную задачу — измерить длину Маточкина Шара экспедиция выполнить не смогла, так как просто не нашла пролива вследствие неверности карт.').addTo(map);
 
@@ -129,7 +129,7 @@ function civ() {
         layer.bindPopup(feature.properties.name);
       }
       });
-      omnivore.kml('/kml/tsiv.kml', null, customLayer).addTo(map); 
+      omnivore.kml('./kml/tsiv.kml', null, customLayer).addTo(map); 
 
       let church = L.marker([73.8422098, 54.8049971], {icon: churchIcon}).bindPopup('В третий и в последний раз мореплаватель отправился к Новой Земле в 1838 году, встав во главе гидрографической экспедиции на шхунах «Новая Земля» и «Шпицберген». В марте 1839 г. Циволька умер от цинги. Похоронен на Новой земле.').addTo(map);
 
@@ -151,7 +151,7 @@ function civ() {
           layer.bindPopup(feature.properties.name);
         }
         });
-        omnivore.kml('/kml/pahtusov_2.kml', null, customLayer2).addTo(map); 
+        omnivore.kml('./kml/pahtusov_2.kml', null, customLayer2).addTo(map); 
 
         let flag1 = L.marker([64.6528737984116, 40.58908849343494], {icon: flagIcon}).bindPopup('24 июля 1834 г. экспедиция на шхуне "Кротов" и карбасе "Казаков" вышла из Архангельска. На каждом судне было по 7 человек. Пахтусов командовал "Кротовым", а Циволька — "Казаковым".').addTo(map);
 
@@ -180,7 +180,7 @@ function roz() {
       layer.bindPopup(feature.properties.name);
   }
   });
-  omnivore.kml('/kml/roz.kml', null, customLayer).addTo(map);
+  omnivore.kml('./kml/roz.kml', null, customLayer).addTo(map);
 
   
   let rudder = L.marker([73.3087871, 54.3546662], {icon: rudderIcon}).bindPopup('Летом 1769, несмотря на потерю большей части людей и крайне плохое состояние судна, Розмыслов добрался до настоящего устья Маточкина Шара, но, за невозможностью плыть далее, должен был вернуться в Архангельск. Результатом его работ была опись Маточкина Шара. Ещё летом 1897 г. английские путешественники открыли следы зимовья Розмыслова в Белужьей губе.').addTo(map);
