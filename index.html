@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ -->    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container _container">
+                <div class="header__body">
+                    <div class="header__title">
+                        Мореплаватели на Архангельском Севере
+                    </div>
+                    <div class="header__imgs">
+                        <a href="#" class="header__img" onclick="roz()" my-title="Ф.Ф. Размыслов">
+                            <img src="img/rozmislov.jpg" alt="">
+                        </a>
+                        <a href="#" onclick="litke()" class="header__img" my-title="Ф.П. Литке"  id="arh2">
+                            <img src="img/litke.jpg" alt="">
+                        </a>
+                        <a href="/" class="header__img-svg">
+                            <img src="img/rose_blue.svg" alt="">
+                        </a>
+                        <a href="#" onclick="paht()" class="header__img" my-title="П.К. Пахтусов" id="arh1">
+                            <img src="img/pahtusov.jpg" alt="">
+                        </a>
+                        <a href="#" class="header__img" onclick="civ()" my-title="А.К. Циволька">
+                            <img src="img/civolka.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="header__info" id="text">
+                      Здесь будет какой-то текст про то, как важно было в 18-19 веке исследовать Новую Землю.
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="page">
+          <div class="page__map map">
+            <div class="map__container _container">
+              <div id="map">
+
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="footer">
+
+        </footer>
+    </div>
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet-omnivore.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/script-load.js"></script>
+</body>
+</html>
