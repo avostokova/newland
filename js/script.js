@@ -33,6 +33,19 @@ let rudderIcon = new LeafIcon({iconUrl: './img/rudder.svg'});
 
 
 
+let customLayer = L.geoJson(null, {
+  style: function(feature) {
+      return { color: '#f00',
+              weight: 2,
+              opacity: 0.1
+            }
+  },
+  onEachFeature: function(feature, layer) {
+    layer.bindPopup(feature.properties.name);
+}
+});
+omnivore.kml('./kml/nz.kml', null, customLayer).addTo(map);
+
 
 //СЂРµРєРё, РјР°СЂРєРµСЂС‹
 
