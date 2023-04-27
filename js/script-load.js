@@ -53,7 +53,10 @@ function paht() {
 
 
 function litke() {
-    document.getElementById('text').innerHTML = '<p><p class="header__info-title"><b>Литке Федор Петрович</b><span>(1787 - 1882 гг.)</span></p> Русский мореплаватель, географ, исследователь Арктики, генерал-адъютант, адмирал (1855), президент Академии Наук в 1864 - 1882 гг.</p>';
+    
+    let text = '<div class="header__legend header__legend-lit"><div class="header__1exp"><p>1я экспедиция Ф.П. Литке 1821 г.</p></div><div class="header__2exp"><p>2я экспедиция Ф.П. Литке 1822 г.</p></div><div class="header__3exp"><p>3я экспедиция Ф.П. Литке 1823 г.</p></div><div class="header__4exp"><p>4я экспедиция Ф.П. Литке 1824 г.</p></div><div class="header__legend-icon"><img src="./img/flag1.svg" alt=""><p>г. Архангельск</p></div><div class="header__legend-icon"><img src="./img/rudder.svg" alt=""><p>Опорные точки машрута</p></div><div class="header__legend-icon"><img src="./img/ship.svg" alt=""><p>Корабль Ф.П. Литке</p></div><div class="header__legend-icon"><img src="./img/church.svg" alt=""><p>Место захоронения Ф.П. Литке</p></div></div>';
+    
+    document.getElementById('text').innerHTML = '<p><p class="header__info-title"><b>Литке Федор Петрович</b><span>(1787 - 1882 гг.)</span></p> Русский мореплаватель, географ, исследователь Арктики, генерал-адъютант, адмирал (1855), президент Академии Наук в 1864 - 1882 гг.</p>' + text;
     
     let customLayer = L.geoJson(null, {
     style: function(feature) {
@@ -136,6 +139,30 @@ function litke() {
             this.openPopup();
           });
           rudder3.on('mouseout', function (e) {
+            this.closePopup();
+          });
+    
+          schuna.on('mouseover', function (e) {
+            this.openPopup();
+          });
+          schuna.on('mouseout', function (e) {
+            this.closePopup();
+          });
+          flag1.on('mouseover', function (e) {
+            this.openPopup();
+          });
+          flag1.on('mouseout', function (e) {
+            this.closePopup();
+          });
+
+          let church_img = './img/litke_coin.jpg';
+
+          let church = L.marker([59.89604435355607, 30.30488365599786], {icon: churchIcon}).bindPopup("<img src=" + church_img + "> <p>Похоронен Ф.П. Литке в Санкт-Петербурге. На изображении памятная монета.</p>").addTo(map);
+
+          church.on('mouseover', function (e) {
+            this.openPopup();
+          });
+          church.on('mouseout', function (e) {
             this.closePopup();
           });
   }
