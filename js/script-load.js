@@ -192,7 +192,9 @@ function civ() {
 }
 
 function roz() {
-  document.getElementById('text').innerHTML = '<p><p class="header__info-title"><b>Розмыслов Фёдор Фёдорович</b><span>(ум. 1771 г.)</span></p> Штурман, путешественник XVIII века, положивший основание русским исследованиям Новой Земли. В 1740 г. поступил в Морскую Академию учеником, с 1744 по 1766 ежегодно находился в плаваниях в Балтийском море и сделал 4 перехода из Кронштадта в Архангельск и обратно.</p>';
+    
+  let legend = '<div class="header__legend header__legend-roz"><div class="header__1exp"><p>Маршрут экспедиции Ф.Ф. Розмыслова</p></div><div class="header__legend-icon"><img src="./img/flag1.svg" alt=""><p>г. Архангельск</p></div><div class="header__legend-icon"><img src="./img/rudder.svg" alt=""><p>Опорные точки машрута</p></div></div>';
+  document.getElementById('text').innerHTML = '<p><p class="header__info-title"><b>Розмыслов Фёдор Фёдорович</b><span>(ум. 1771 г.)</span></p> Штурман, путешественник XVIII века, положивший основание русским исследованиям Новой Земли. В 1740 г. поступил в Морскую Академию учеником, с 1744 по 1766 ежегодно находился в плаваниях в Балтийском море и сделал 4 перехода из Кронштадта в Архангельск и обратно.</p>' + legend;
   
   let customLayer = L.geoJson(null, {
     style: function(feature) {
@@ -218,5 +220,11 @@ function roz() {
     this.closePopup();
   });
   let flag1 = L.marker([64.5528737984116, 40.48908849343494], {icon: flagIcon}).bindPopup('Розмыслов на судне, снаряженном купцом Барминым, с небольшим экипажем 10 июля 1768 г. выехал из Архангельска и 6 августа был у берегов Новой Земли.').addTo(map);
-
+  
+  flag1.on('mouseover', function (e) {
+    this.openPopup();
+  });
+  flag1.on('mouseout', function (e) {
+    this.closePopup();
+  });
 }
