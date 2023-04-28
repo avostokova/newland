@@ -31,9 +31,7 @@ let churchIcon = new LeafIcon({iconUrl: './img/church.svg'});
 
 let rudderIcon = new LeafIcon({iconUrl: './img/rudder.svg'});
 
-
-
-let customLayer = L.geoJson(null, {
+let custLayer = L.geoJson(null, {
   style: function(feature) {
       return { color: '#f00',
               weight: 2,
@@ -44,7 +42,8 @@ let customLayer = L.geoJson(null, {
     layer.bindPopup(feature.properties.name);
 }
 });
-omnivore.kml('./kml/nz.kml', null, customLayer).addTo(map);
+omnivore.kml('./kml/nz.kml', null, custLayer).addTo(map);
+
 
 
 //СЂРµРєРё, РјР°СЂРєРµСЂС‹
